@@ -91,25 +91,18 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
         TextView nameshow = findViewById(R.id.nameshow);
         nameshow.setText(score+" คะเเนน");
         mAnswerword = item.word;
-
-        // สุ่มตำแหน่งปุ่มที่จะแสดงคำตอบ
         int randomButton = rand.nextInt(4);
-        // แสดงคำศัพท์ที่เป็นคำตอบ
         mButtonlist[randomButton].setText(item.word);
-        // ลบ WordItem ที่เป็นคำตอบออกจาก list
         mItemList.remove(item);
         System.out.println("selected:"+item.word);
-        // เอา list ที่เหลือมา shuffle
         Collections.shuffle(mItemList);
-       // System.out.println(">"+mItemList);
         for(int i =0;i<mItemList.size();i++){
             WordItem output = mItemList.get(i);
             String stringa = output.word;
             System.out.println(">>"+stringa);
         }
-        // เอาคำศัพท์จาก list ที่ตำแหน่ง 0 ถึง 3 มาแสดงที่ปุ่ม 3 ปุ่มที่เหลือ โดยข้ามปุ่มที่เป็นคำตอบ
         for (int i = 0; i < 4; i++) {
-            if (i == randomButton) { // ถ้า i คือ index ของปุ่มคำตอบ ให้ข้ามไป
+            if (i == randomButton) {
                 continue;
             }
             System.out.println((i+">><<"+randomButton));
