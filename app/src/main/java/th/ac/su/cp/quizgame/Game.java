@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -97,10 +98,15 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
         mButtonlist[randomButton].setText(item.word);
         // ลบ WordItem ที่เป็นคำตอบออกจาก list
         mItemList.remove(item);
-
+        System.out.println("selected:"+item.word);
         // เอา list ที่เหลือมา shuffle
         Collections.shuffle(mItemList);
-
+       // System.out.println(">"+mItemList);
+        for(int i =0;i<mItemList.size();i++){
+            WordItem output = mItemList.get(i);
+            String stringa = output.word;
+            System.out.println(">>"+stringa);
+        }
         // เอาคำศัพท์จาก list ที่ตำแหน่ง 0 ถึง 3 มาแสดงที่ปุ่ม 3 ปุ่มที่เหลือ โดยข้ามปุ่มที่เป็นคำตอบ
         for (int i = 0; i < 4; i++) {
             if (i == randomButton) { // ถ้า i คือ index ของปุ่มคำตอบ ให้ข้ามไป

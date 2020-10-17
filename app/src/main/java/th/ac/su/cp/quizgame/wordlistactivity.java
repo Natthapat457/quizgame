@@ -31,10 +31,11 @@ public class wordlistactivity extends AppCompatActivity {
             new WordItem(R.drawable.pig,"PIG"),
             new WordItem(R.drawable.rabbit,"RABBIT"),
             new WordItem(R.drawable.tiger,"TIGER"),
-            new WordItem(R.drawable.dog,"DOG"),
-            new WordItem(R.drawable.pig,"PIG"),
-            new WordItem(R.drawable.rabbit,"RABBIT"),
-            new WordItem(R.drawable.tiger,"TIGER")
+            new WordItem(R.drawable.owl,"OWL"),
+             new WordItem(R.drawable.dolphin,"Dolphin"),
+             new WordItem(R.drawable.koala,"KOALA"),
+             new WordItem(R.drawable.penguin,"PENGUIN"),
+
     };
 
 
