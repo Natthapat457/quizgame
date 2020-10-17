@@ -72,9 +72,12 @@
         android:layout_width="378dp"
         android:layout_height="50dp"
         android:layout_marginTop="32dp"
+        android:background="#EB42F8"
         android:gravity="center|center_horizontal"
-        android:text="TextView"
+        android:text="@string/textview3"
+        android:textColor="#FFFFFF"
         android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="17dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

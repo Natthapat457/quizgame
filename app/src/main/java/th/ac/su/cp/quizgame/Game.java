@@ -58,12 +58,14 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
             dialog.setTitle("สรุปผล");
             dialog.setMessage("คุณได้"+score+"คะเเนน\nต้องการเล่นใหม่หรือไม่ ?");
 
-            System.out.println(score+">>>>>>>>>>>>>"+counter);
+
             dialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
                     score=0;
-                    counter=0;
+                    counter=1;
+                    TextView nameshow = findViewById(R.id.nameshow);
+                    nameshow.setText(score+" คะเเนน");
 
                 }
             });
@@ -79,6 +81,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
             });
             dialog.show();
         }
+        System.out.println(score+">>>>>>>>>>>>>"+counter);
         counter++;
         List<WordItem> mItemList = new ArrayList<>(Arrays.asList(wordlistactivity.items));
         int answerindex = rand.nextInt(itemlist.size());
@@ -103,6 +106,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
             if (i == randomButton) { // ถ้า i คือ index ของปุ่มคำตอบ ให้ข้ามไป
                 continue;
             }
+            System.out.println((i+">><<"+randomButton));
             mButtonlist[i].setText(mItemList.get(i).word);
         }
     }
