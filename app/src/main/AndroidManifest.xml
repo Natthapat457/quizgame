@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".wordlistactivity"></activity>
+        <activity android:name=".Game"></activity>
+        <activity android:name=".Word_detail_activity" />
+        <activity android:name=".wordlistactivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/FullScreen">
